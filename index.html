@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    button {
+        margin-top: 10px;
+    }
+
+    #gif2 {
+        display: none;
+    }
+
+    @media screen and (max-width: 500px) {
+        #gif1, #gif2 {
+            height: 300PX;
+            width: 300PX;
+        }
+    }
+</style>
+
+<body>
+    <h1>Somador</h1>
+
+    <p>Digite um número</p>
+    <label for="numero1"></label>
+    <input type="number" id="numero1">
+    <p>Digite outro número</p>
+    <label for="numero2"></label>
+    <input type="number" id="numero2">
+    <br>
+    <button onclick="soma()">Somar</button>
+    <br>
+    <img src="https://i.pinimg.com/originals/f0/af/c4/f0afc42be331266eaf5413bce05c4783.gif" id="gif1">
+    <img src="https://img1.picmix.com/output/pic/normal/8/9/0/7/3667098_55047.gif" id="gif2">
+</body>
+<script>
+    function soma() {
+        const num1 = document.getElementById("numero1");
+        const num2 = document.getElementById("numero2");
+        let numero1 = parseFloat(num1.value);
+        let numero2 = parseFloat(num2.value);
+        const resultado = numero1 + numero2;
+        if (resultado == "0") {
+            alert("tu digitou 0 + 0? que isso paizão..")
+        } else {
+            alert("A soma disso é " + resultado)
+        }
+        let gif1 = document.getElementById("gif1")
+        let gif2 = document.getElementById("gif2")
+        gif1.style.display = "none"
+        gif2.style.display = "block"
+    }
+</script>
+
+</html>
